@@ -10,9 +10,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a10/device.mk)
 
+# Inherit some common lineage stuff
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+
+# Rom Specific Flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Maintainer
+CORVUS_MAINATAINER := Ʀᴀ㉿ɪƁ
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
-PRODUCT_NAME := full_a10
+PRODUCT_NAME := corvus_a10
 PRODUCT_MODEL := SM-A105F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
