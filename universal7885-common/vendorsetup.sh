@@ -30,7 +30,7 @@ git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung.
 mv nfc hardware/samsung
 
 
-echo 'Cloning Hardware Samsung [5/8]'
+echo 'Cloning Samsung Extras [5/8]'
 # Samsung Extra Interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces.git -b lineage-20 hardware/samsung-ext/interfaces
 
