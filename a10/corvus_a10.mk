@@ -17,9 +17,13 @@ $(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
 
 # Maintainer
-CORVUS_MAINATAINER := Ʀᴀ㉿ɪƁ
+CORVUS_MAINTAINER := Ʀᴀ㉿ɪƁ
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    CORVUS_MAINTAINER="Ʀᴀ㉿ɪƁ"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
