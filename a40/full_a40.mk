@@ -10,24 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a40/device.mk)
 
-# Inherit some common rom stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Rom Specific Flags
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_BOOT_ANIMATION_RES := 1080
-SYSTEM_OPTIMIZE_JAVA := true
-SYSTEMUI_OPTIMIZE_JAVA := true
-
-# Maintainer
-RISING_MAINTAINER := Ʀᴀ㉿ɪƁ
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_MAINTAINER="Ʀᴀ㉿ɪƁ"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a40
-PRODUCT_NAME := lineage_a40
+PRODUCT_NAME := full_a40
 PRODUCT_MODEL := SM-A405F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
