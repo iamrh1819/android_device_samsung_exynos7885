@@ -8,7 +8,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/a10dd/device.mk)
-
+ALLOW_MISSING_DEPENDENCIES=true
+ALLOW_MISSING_DEPENDENCIES := true
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10dd
 PRODUCT_NAME := full_a10dd
