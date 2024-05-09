@@ -46,11 +46,15 @@ class GenerateMK():
             writeln(mk)
             writeln(mk, f'PRODUCT_NAME := {vendor}_{device}')
             writeln(mk)
+            writeln(mk, 'SYSTEM_OPTIMIZE_JAVA := true')
+            writeln(mk)
+            writeln(mk, 'SYSTEMUI_OPTIMIZE_JAVA := true')
+            writeln(mk)
             if device in HD_DEVICES:
-                writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 720')
+                writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
             else:
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
-            writeln(mk, 'TARGET_USES_MINI_GAPPS := true')
+            writeln(mk, 'TARGET_USES_PICO_GAPPS := true')
             log(f'Write entry <= {device_path}')
 
     def write_makefiles(self):
@@ -85,7 +89,7 @@ class VendorFixer():
             return True
         return False
 
-RisingVF = VendorFixer('config/rising.mk', 'rising')
+
 MikuVF = VendorFixer('build/product/miku_product.mk', 'miku')
 TestVF = VendorFixer('config/my_ss.mk', 'ss')
 
@@ -93,7 +97,7 @@ def main():
     vendors = os.listdir('vendor')
     ok = False
 
-    for vf in [RisingVF, MikuVF, TestVF]:
+    for vf in [MikuVF, TestVF]:
         if vf.check():
             return
 
