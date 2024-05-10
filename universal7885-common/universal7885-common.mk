@@ -3,8 +3,14 @@ ifeq ($(TARGET_LOCAL_ARCH),arm64)
 $(call inherit-product, vendor/samsung/universal7885-common/universal7885-common-vendor.mk)
 endif
 
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 # Client Id base
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Evox
+TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Allow Copying of apks.
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
@@ -119,7 +125,7 @@ PRODUCT_PACKAGES += \
 TARGET_BOARD_HAS_FP ?= true
 ifeq ($(TARGET_BOARD_HAS_FP), true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung
+    android.hardware.biometrics.fingerprint-service.samsung
 endif
 
 # Gatekeeper
@@ -129,18 +135,18 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    android.frameworks.sensorservice@1.0.vendor
 
 # Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     libgui_vendor
 
 PRODUCT_PACKAGES += \
-    hwcomposer.$(TARGET_SOC) \
+    android.hardware.composer.hwc3-service.slsi \
     gralloc.$(TARGET_SOC) \
     libion_exynos
 
@@ -212,6 +218,17 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # DEVICE_PACAKGE_OVERLAYS += $(LOCAL_PATH)/overlay-rom
+
+ifeq ($(TARGET_LOCAL_ARCH),arm64)
+SYMLINK_SUFFIXES := _symlink32 _symlink64
+else
+SYMLINK_SUFFIXES := _symlink32
+endif
+SYMLINK_LIST := libOpenCL libOpenCL.1 libOpenCL.1.1 vulkan_mali
+
+# Symlink targets
+$(foreach suf, $(SYMLINK_SUFFIXES), $(foreach lib, $(SYMLINK_LIST), \
+	$(eval PRODUCT_PACKAGES += $(lib)$(suf))))
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -288,8 +305,8 @@ PRODUCT_PACKAGES += \
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -366,13 +383,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
-# Workaround for vintf issues...
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vintf/compatibility_matrix.3.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/vintf/compatibility_matrix.3.xml
-
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
     WifiOverlay \
     wpa_supplicant
