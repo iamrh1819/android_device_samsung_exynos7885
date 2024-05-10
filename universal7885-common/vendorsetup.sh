@@ -32,6 +32,8 @@ mv nfc hardware/samsung
 
 echo 'Cloning Samsung Extras [5/8]'
 # Samsung Extra Interfaces
+rm -rf hardware/lineage/interfaces
+git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces.git -b lineage-20.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces.git -b lineage-20 hardware/samsung-ext/interfaces
 
 
@@ -50,8 +52,15 @@ echo 'Cloning Samsung_Slsi and Linaro BSP repos [7/8]'
 # SLSI Sepolicy
 rm -rf device/samsung_slsi/sepolicy
 git clone https://github.com/Roynas-Android-Playground/android_device_samsung_slsi_sepolicy.git -b lineage-20 device/samsung_slsi/sepolicy
+
 # Linaro BSP
 rm -rf hardware/samsung_slsi-linaro
+rm -rf hardware/samsung_slsi-linaro/graphics
+rm -rf hardware/samsung_slsi-linaro/config
+rm -rf hardware/samsung_slsi-linaro/exynos
+rm -rf hardware/samsung_slsi-linaro/exynos5
+rm -rf hardware/samsung_slsi-linaro/openmax
+rm -rf hardware/samsung_slsi-linaro/interfaces
 
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git -b lineage-20 hardware/samsung_slsi-linaro/graphics
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git -b lineage-20 hardware/samsung_slsi-linaro/config
