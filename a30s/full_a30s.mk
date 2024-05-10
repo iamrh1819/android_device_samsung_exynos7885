@@ -10,9 +10,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a30s/device.mk)
 
+# Rom Specific Flags
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_HAS_FOD := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a30s
 PRODUCT_NAME := full_a30s
 PRODUCT_MODEL := SM-A307F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
