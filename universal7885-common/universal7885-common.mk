@@ -125,7 +125,7 @@ PRODUCT_PACKAGES += \
 TARGET_BOARD_HAS_FP ?= true
 ifeq ($(TARGET_BOARD_HAS_FP), true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung
+    android.hardware.biometrics.fingerprint@2.3-service.samsung
 endif
 
 # Gatekeeper
@@ -385,7 +385,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi@1.0-service \
     hostapd \
     WifiOverlay \
     wpa_supplicant
