@@ -75,7 +75,7 @@ hw3d.force=1
 persist.sys.ui.hw=1
 ro.sf.compbypass.enable=0
 debug.sf.hw=1
-debug.composition.type=c2d
+# debug.composition.type=c2d
 persist.sys.composition.type=c2d
 debug.performance.tuning=1
 
@@ -159,7 +159,6 @@ net.unix.max_dgram_qlen=50
 
 net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.lte=262144,524288,3145728,262144,524288,3145728
 net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
 net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.evdo=4096,87380,563200,4096,16384,262144
