@@ -22,10 +22,19 @@ debug.sf.hw=0
 # LTE, GSM and WCDMA
 ro.telephony.default_network=9,9
 
+# Fling
+ro.min.fling_velocity=160 
+ro.max.fling_velocity=20000
+ro.max.fling_velocity=20000 
+ro.vendor.qti.cgroup_follow.enable=true 
+persist.vendor.qti.inputopts.enable=true 
+persist.vendor.qti.inputopts.movetouchslop=0.6 
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 ## Surfaceflinger
 debug.sf.enable_hwc_vds=0
-ro.surface_flinger.set_idle_timer_ms=80
-ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_idle_timer_ms=4000
+ro.surface_flinger.set_touch_timer_ms=4000
 ro.surface_flinger.set_display_power_timer_ms=1000
 debug.sf.predict_hwc_composition_strategy=0
 ro.surface_flinger.has_HDR_display=true
@@ -36,7 +45,11 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate?=true
 
 # Display
-persist.sys.sf.color_saturation=1.25
+debug.sf.latch_unsignaled=1
+persist.vendor.color.matrix=2
+persist.sys.force_sw_gles=1
+ro.kernel.qemu.gles=0
+persist.sys.sf.color_saturation=1.00
 persist.sys.sf.color_mode=1
 vendor.display.disable_inline_rotator=1
 ro.vendor.display.sensortype=2
