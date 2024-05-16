@@ -102,6 +102,10 @@ ro.hardware.chipname=exynos7884B
 
 # Audio
 ro.config.vc_call_vol_steps=8
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicerec=true
+persist.audio.fluence.speaker=true
+use.voice.path.for.pcm.voip=true
 
 ## Vibrator HAL
 ro.vendor.vibrator_hal.click_duration=60
