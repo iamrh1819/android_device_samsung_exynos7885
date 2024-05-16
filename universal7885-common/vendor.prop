@@ -60,7 +60,7 @@ ro.debug_level=0x494d
 ro.hardware.chipname=exynos7884B
 
 # Audio
-ro.config.vc_call_vol_steps=14
+ro.config.vc_call_vol_steps=8
 
 ## Vibrator HAL
 ro.vendor.vibrator_hal.click_duration=75
