@@ -3,14 +3,11 @@ ifeq ($(TARGET_LOCAL_ARCH),arm64)
 $(call inherit-product, vendor/samsung/universal7885-common/universal7885-common-vendor.mk)
 endif
 
-# Soong namespaces
-$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+# Evox
+TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Client Id base
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-# Evox
-TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Allow Copying of apks.
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
@@ -140,6 +137,7 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
@@ -218,17 +216,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # DEVICE_PACAKGE_OVERLAYS += $(LOCAL_PATH)/overlay-rom
-
-ifeq ($(TARGET_LOCAL_ARCH),arm64)
-SYMLINK_SUFFIXES := _symlink32 _symlink64
-else
-SYMLINK_SUFFIXES := _symlink32
-endif
-SYMLINK_LIST := libOpenCL libOpenCL.1 libOpenCL.1.1 vulkan_mali
-
-# Symlink targets
-$(foreach suf, $(SYMLINK_SUFFIXES), $(foreach lib, $(SYMLINK_LIST), \
-	$(eval PRODUCT_PACKAGES += $(lib)$(suf))))
 
 # OMX
 PRODUCT_PACKAGES += \
