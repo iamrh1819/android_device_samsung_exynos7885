@@ -27,7 +27,6 @@
 
 #include <vector>
 
-#include <sys/sysinfo.h>
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -73,14 +72,6 @@ static inline bool hasEnding(const std::string& str, char suffix)
   return !str.empty() && str.back() == suffix;
 }
 
-static void setLowRamProp(void) {
-  static constexpr auto GB_3 = 3ull * 1024 * 1024 * 1024;
-  struct sysinfo sys {};
-
-  sysinfo(&sys);
-  if (sys.totalram <= GB_3)
-    property_override("ro.config.low_ram", "true");
-}
 
 void vendor_load_properties() {
   std::string model;
@@ -106,8 +97,7 @@ void vendor_load_properties() {
     property_override("ro.boot.product.hardware.sku", "NFC");
   }
 
-  // Set Low ram prop based on HW ram size
-  setLowRamProp();
+  
 
   // Set model based on bootloader supplied model
   set_ro_build_prop("model", model);
