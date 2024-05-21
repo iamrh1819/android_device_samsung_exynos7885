@@ -19,7 +19,7 @@ echo 'Cloning Vendor Trees [3/8]'
 # Vendor blobs for exynos7885
 rm -rf vendor/samsung
 
-git clone https://github.com/iamrh1819/android_vendor_samsung_exynos7885 -b android-13 vendor/samsung
+git clone https://github.com/eurekadevelopment/android_vendor_samsung_exynos7885 -b android-13 vendor/samsung
 
 
 echo 'Cloning Hardware Samsung [4/8]'
