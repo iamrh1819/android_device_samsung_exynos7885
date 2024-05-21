@@ -19,7 +19,7 @@ echo 'Cloning Vendor Trees [3/8]'
 # Vendor blobs for exynos7885
 rm -rf vendor/samsung
 
-git clone https://github.com/iamrh1819/android_vendor_samsung_exynos7885 -b android-13 vendor/samsung
+git clone https://github.com/eurekadevelopment/android_vendor_samsung_exynos7885 -b android-13 vendor/samsung
 
 
 echo 'Cloning Hardware Samsung [4/8]'
@@ -32,7 +32,7 @@ mv nfc hardware/samsung
 
 echo 'Cloning Samsung Extras [5/8]'
 # Samsung Extra Interfaces
-rm -rf hardware/lineage/interfaces
+#rm -rf hardware/lineage/interfaces
 #git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-20 hardware/samsung-ext/interfaces
 
