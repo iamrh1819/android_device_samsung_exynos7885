@@ -3,11 +3,11 @@ ifeq ($(TARGET_LOCAL_ARCH),arm64)
 $(call inherit-product, vendor/samsung/universal7885-common/universal7885-common-vendor.mk)
 endif
 
-# Evox
-TARGET_SUPPORTS_TOUCHGESTURES := true
-
 # Client Id base
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Evox
+TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Allow Copying of apks.
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
@@ -132,8 +132,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor \
-    android.frameworks.sensorservice@1.0.vendor
+    android.hardware.gnss@2.1.vendor
 
 # Graphics
 PRODUCT_PACKAGES += \
