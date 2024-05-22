@@ -6,6 +6,9 @@ endif
 # Client Id base
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
+# Evox
+TARGET_SUPPORTS_TOUCHGESTURES := true
+
 # Allow Copying of apks.
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
