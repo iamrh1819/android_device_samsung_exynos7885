@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
     libgui_vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.composer.hwc3-service.slsi \
+    hwcomposer.$(TARGET_SOC) \
     gralloc.$(TARGET_SOC) \
     libion_exynos
 
