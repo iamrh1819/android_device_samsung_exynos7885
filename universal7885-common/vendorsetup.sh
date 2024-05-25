@@ -32,8 +32,8 @@ mv nfc hardware/samsung
 
 echo 'Cloning Hardware Samsung [5/8]'
 # Samsung Extra Interfaces
-#rm -rf hardware/lineage/interfaces
-#git clone https://github.com/LineageOS/android_hardware_lineage_interfaces -b lineage-21.0 hardware/lineage/interfaces
+rm -rf hardware/lineage/interfaces
+git clone https://github.com/LineageOS/android_hardware_lineage_interfaces -b lineage-21.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-21 hardware/samsung-ext/interfaces
 
 
