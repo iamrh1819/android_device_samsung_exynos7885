@@ -59,6 +59,7 @@ rm -rf hardware/samsung_slsi-linaro
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git -b lineage-19.1 hardware/samsung_slsi-linaro/graphics
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git -b lineage-19.1 hardware/samsung_slsi-linaro/config
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos5
 git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openmax.git -b lineage-19.1 hardware/samsung_slsi-linaro/openmax
 
 
