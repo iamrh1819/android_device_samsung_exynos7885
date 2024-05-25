@@ -69,7 +69,7 @@ git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_conf
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_exynos.git hardware/samsung_slsi-linaro/exynos
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_exynos5.git hardware/samsung_slsi-linaro/exynos5
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_openmax.git hardware/samsung_slsi-linaro/openmax
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_interfaces.git hardware/samsung_slsi-linaro/interfaces
+#git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_interfaces.git hardware/samsung_slsi-linaro/interfaces
 
 echo 'Cloning Sepolicy Dependency repo [8/8]'
 # Sepolicy
