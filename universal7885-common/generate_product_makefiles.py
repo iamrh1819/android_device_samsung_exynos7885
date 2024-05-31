@@ -46,9 +46,9 @@ class GenerateMK():
             writeln(mk)
             writeln(mk, f'PRODUCT_NAME := {vendor}_{device}')
             writeln(mk)
-            writeln(mk, f'SYSTEM_OPTIMIZE_JAVA := true')
+            writeln(mk, 'SYSTEM_OPTIMIZE_JAVA := true')
             writeln(mk)
-            writeln(mk, f'SYSTEMUI_OPTIMIZE_JAVA := true')
+            writeln(mk, 'SYSTEMUI_OPTIMIZE_JAVA := true')
             writeln(mk)
             if device in HD_DEVICES:
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
