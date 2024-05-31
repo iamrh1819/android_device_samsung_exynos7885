@@ -54,7 +54,6 @@ class GenerateMK():
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
             else:
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
-              writeln(mk, 'TARGET_CORE_GMS := true')
             writeln(mk, 'TARGET_USES_PICO_GAPPS := true')
             log(f'Write entry <= {device_path}')
 
