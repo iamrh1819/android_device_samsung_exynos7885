@@ -26,7 +26,7 @@ echo 'Cloning Hardware Samsung [4/8]'
 # Hardware OSS parts for Samsung
 mv hardware/samsung/nfc .
 rm -rf hardware/samsung
-git clone https://github.com/iamrh1819/android_hardware_samsung -b lineage-20.0 hardware/samsung
+git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung -b thirteen hardware/samsung
 mv nfc hardware/samsung
 
 
@@ -56,20 +56,13 @@ git clone https://github.com/Roynas-Android-Playground/android_device_samsung_sl
 # Linaro BSP
 rm -rf hardware/samsung_slsi-linaro
 
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git hardware/samsung_slsi-linaro/graphics
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git hardware/samsung_slsi-linaro/config
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git hardware/samsung_slsi-linaro/exynos
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos5.git hardware/samsung_slsi-linaro/exynos5
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openmax.git -b lineage-19.1 hardware/samsung_slsi-linaro/openmax
-#git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_interfaces.git hardware/samsung_slsi-linaro/interfaces
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git -b lineage-19.1 hardware/samsung_slsi-linaro/graphics
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git -b lineage-19.1 hardware/samsung_slsi-linaro/config
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos5.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos5
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openmax.git -b lineage-19.1 hardware/samsung_slsi-linaro/openmax
 
 
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_graphics.git hardware/samsung_slsi-linaro/graphics
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_config.git hardware/samsung_slsi-linaro/config
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_exynos.git hardware/samsung_slsi-linaro/exynos
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_exynos5.git hardware/samsung_slsi-linaro/exynos5
-git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_openmax.git hardware/samsung_slsi-linaro/openmax
-#git clone https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_interfaces.git hardware/samsung_slsi-linaro/interfaces
 
 echo 'Cloning Sepolicy Dependency repo [8/8]'
 # Sepolicy
