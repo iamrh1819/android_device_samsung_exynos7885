@@ -26,7 +26,7 @@ echo 'Cloning Hardware Samsung [4/8]'
 # Hardware OSS parts for Samsung
 mv hardware/samsung/nfc .
 rm -rf hardware/samsung
-git clone https://github.com/iamrh1819/android_hardware_samsung -b thirteen hardware/samsung
+git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung -b thirteen hardware/samsung
 mv nfc hardware/samsung
 
 
@@ -35,7 +35,7 @@ echo 'Cloning Samsung Extras [5/8]'
 #rm -rf hardware/lineage/interfaces
 #git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-20 hardware/samsung-ext/interfaces
-
+git clone https://github.com/LineageOS/android_hardware_lineage_livedisplay -b lineage-20.0 hardware/lineage/livedisplay
 
 echo 'Cloning Lineage-CP [6/8]'
 # Lineage-CP
