@@ -12,7 +12,7 @@ echo 'Cloning Device Tree [2/8]'
 # Device tree for exynos7885
 rm -rf device/samsung
 
-git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A13 device/samsung
+git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A13-L device/samsung
 
 
 echo 'Cloning Vendor Trees [3/8]'
@@ -26,7 +26,7 @@ echo 'Cloning Hardware Samsung [4/8]'
 # Hardware OSS parts for Samsung
 mv hardware/samsung/nfc .
 rm -rf hardware/samsung
-git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung -b thirteen hardware/samsung
+git clone https://github.com/iamrh1819/android_hardware_samsung -b thirteen hardware/samsung
 mv nfc hardware/samsung
 
 
