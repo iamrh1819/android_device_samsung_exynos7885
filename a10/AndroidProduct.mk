@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ethereal_a10.mk
+    $(LOCAL_DIR)/infinity_a10.mk
 
 COMMON_LUNCH_CHOICES := \
-    ethereal_a10-eng \
-    ethereal_a10-user \
-    ethereal_a10-userdebug
+    infinity_a10-eng \
+    infinity_a10-user \
+    infinity_a10-userdebug
