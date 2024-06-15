@@ -10,6 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a10/device.mk)
 
+# Ethreal Stuffs
+$(call inherit-product, vendor/ethereal/config/common_full_phone.mk)
+
+# Ethreal Stuffs
+ETHEREAL_MAINTAINER := Ʀᴀ㉿ɪƁ
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
