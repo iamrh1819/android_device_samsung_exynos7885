@@ -13,14 +13,17 @@ $(call inherit-product, device/samsung/a10/device.mk)
 # Ethreal Stuffs
 $(call inherit-product, vendor/ethereal/config/common_full_phone.mk)
 
-# Ethreal Stuffs
+# Rom Flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
 ETHEREAL_MAINTAINER := Ʀᴀ㉿ɪƁ
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
 
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
-PRODUCT_NAME := full_a10
+PRODUCT_NAME := ethreal_a10
 PRODUCT_MODEL := SM-A105F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
