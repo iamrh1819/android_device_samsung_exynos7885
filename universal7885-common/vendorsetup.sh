@@ -12,7 +12,7 @@ echo 'Cloning Device Tree [2/8]'
 # Device tree for exynos7885
 rm -rf device/samsung
 
-git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A13 device/samsung
+git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A13-M device/samsung
 
 
 echo 'Cloning Vendor Trees [3/8]'
@@ -71,10 +71,3 @@ rm -rf device/aosp/sepolicy
 git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
 
 echo 'Completed, Now proceeding to lunch'
-
-if [ ! -e .repo/local_manifests/eureka_deps.xml ]; then
-	git clone https://github.com/iamrh1819/local_manifests .repo/local_manifests
-	echo "Run repo sync again"
-fi
-
-python3 device/samsung/universal7885-common/generate_product_makefiles.py
