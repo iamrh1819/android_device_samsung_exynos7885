@@ -23,7 +23,7 @@ SYSTEMUI_OPTIMIZE_JAVA := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a10
-PRODUCT_NAME := ethreal_a10
+PRODUCT_NAME := ethereal_a10
 PRODUCT_MODEL := SM-A105F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
