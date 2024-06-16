@@ -71,3 +71,9 @@ rm -rf device/aosp/sepolicy
 git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
 
 echo 'Completed, Now proceeding to lunch'
+
+
+if [ ! -e .repo/local_manifests/eureka_deps.xml ]; then
+	git clone https://github.com/iamrh1819/local_manifests .repo/local_manifests
+	echo "Run repo sync again"
+fi
