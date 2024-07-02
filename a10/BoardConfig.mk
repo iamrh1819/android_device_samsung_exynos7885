@@ -16,7 +16,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 157286400
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 394264576
 
 # SPL
-VENDOR_SECURITY_PATCH := 2021-12-01
+VENDOR_SECURITY_PATCH := 6969-69-69
 
 # Inherit common board flags
 include device/samsung/universal7885-common/BoardConfigCommon.mk
