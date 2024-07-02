@@ -25,6 +25,6 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.a30s
 include device/samsung/universal7885-common/BoardConfigCommon.mk
 
 # SPL
-VENDOR_SECURITY_PATCH := 2021-11-01
+VENDOR_SECURITY_PATCH := 2099-09-09
 
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
