@@ -26,7 +26,7 @@ echo 'Cloning Hardware Samsung [4/8]'
 # Hardware OSS parts for Samsung
 mv hardware/samsung/nfc .
 rm -rf hardware/samsung
-git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung -b fourteen hardware/samsung
+git clone https://github.com/linux4-bringup-priv/android_hardware_samsung -b lineage-21 hardware/samsung
 mv nfc hardware/samsung
 
 
