@@ -46,14 +46,12 @@ class GenerateMK():
             writeln(mk)
             writeln(mk, f'PRODUCT_NAME := {vendor}_{device}')
             writeln(mk)
-            writeln(mk, 'SYSTEM_OPTIMIZE_JAVA := true')
-            writeln(mk)
-            writeln(mk, 'SYSTEMUI_OPTIMIZE_JAVA := true')
-            writeln(mk)
+            
             if device in HD_DEVICES:
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
             else:
                 writeln(mk, 'TARGET_BOOT_ANIMATION_RES := 1080')
+              writeln(mk, 'TARGET_ENABLE_BLUR := false')
             writeln(mk, 'TARGET_USES_PICO_GAPPS := true')
             log(f'Write entry <= {device_path}')
 
