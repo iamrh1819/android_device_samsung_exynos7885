@@ -116,3 +116,17 @@ ro.vendor.vibrator_hal.texture_tick_duration=40
 # Fingerprint
 ro.vendor.fingerprint.type?=rear
 ro.vendor.fingerprint.supports_gestures?=true
+
+# Sensors
+persist.vendor.sensors.allow_non_default_discovery=true
+persist.vendor.sensors.enable.mag_filter=true
+persist.vendor.sensors.on_change_sample_period=true
+persist.vendor.sensors.sync_request=true
+
+# DRM
+drm.service.enabled=true
+
+# Media
+debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
