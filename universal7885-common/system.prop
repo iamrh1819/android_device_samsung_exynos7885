@@ -169,3 +169,8 @@ net.tcp.buffersize.hspa=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.hspap=4096,87380,1220608,4096,16384,393216
 net.tcp.buffersize.hsupa=4096,87380,704512,4096,16384,262144
 net.tcp.buffersize.hsdpa=6144,262144,1048576,6144,262144,1048576
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
