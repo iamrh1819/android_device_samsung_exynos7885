@@ -174,3 +174,8 @@ net.tcp.buffersize.hsdpa=6144,262144,1048576,6144,262144,1048576
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+persist.rcs.supported=0
+
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
