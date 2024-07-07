@@ -103,6 +103,8 @@ ro.hardware.chipname=exynos7884B
 
 # Audio
 ro.config.vc_call_vol_steps=8
+ro.vendor.audio.sdk.fluencetype=none
+ro.vendor.audio.sdk.ssr=false
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicerec=true
 persist.audio.fluence.speaker=true
