@@ -1,6 +1,6 @@
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
-ro.zram.first_wb_delay_mins=360
+ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
 
 # LMKD
@@ -59,7 +59,7 @@ debug.performance.tuning=1
 
 debug.gr.swapinterval=0
 
-ro.config.vc_call_steps=20
+ro.config.vc_call_steps=8
 
 ro.config.hw_quickpoweron=true
 
@@ -179,3 +179,14 @@ persist.rcs.supported=0
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
+
+ro.vendor.qti.va_aosp.support=1
+
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
+mm.enable.smoothstreaming=true
+
+# GPS
+persist.vendor.overlay.izat.optin=rro
+
+debug.force_no_blanking=true
