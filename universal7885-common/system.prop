@@ -1,6 +1,6 @@
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
-ro.zram.first_wb_delay_mins=360
+ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
 
 # LMKD
@@ -21,11 +21,6 @@ debug.hwui.skia_atrace_enabled=false
 #debug.sf.disable_backpressure=1
 
 # Tweaks
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicerec=true
-persist.audio.fluence.speaker=true
-use.voice.path.for.pcm.voip=true
-
 ro.media.enc.jpeg.quality=100 
 ro.media.dec.jpeg.memcap=8000000 
 ro.media.enc.hprof.vid.bps=8000000 
@@ -58,8 +53,6 @@ ro.config.hw_fast_dormancy=1
 debug.performance.tuning=1
 
 debug.gr.swapinterval=0
-
-ro.config.vc_call_steps=20
 
 ro.config.hw_quickpoweron=true
 
@@ -169,3 +162,24 @@ net.tcp.buffersize.hspa=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.hspap=4096,87380,1220608,4096,16384,393216
 net.tcp.buffersize.hsupa=4096,87380,704512,4096,16384,262144
 net.tcp.buffersize.hsdpa=6144,262144,1048576,6144,262144,1048576
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+persist.rcs.supported=0
+
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+ro.vendor.qti.va_aosp.support=1
+
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
+mm.enable.smoothstreaming=true
+
+# GPS
+persist.vendor.overlay.izat.optin=rro
+
+debug.force_no_blanking=true
