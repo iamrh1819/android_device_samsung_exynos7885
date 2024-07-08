@@ -21,11 +21,6 @@ debug.hwui.skia_atrace_enabled=false
 #debug.sf.disable_backpressure=1
 
 # Tweaks
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicerec=true
-persist.audio.fluence.speaker=true
-use.voice.path.for.pcm.voip=true
-
 ro.media.enc.jpeg.quality=100 
 ro.media.dec.jpeg.memcap=8000000 
 ro.media.enc.hprof.vid.bps=8000000 
@@ -58,8 +53,6 @@ ro.config.hw_fast_dormancy=1
 debug.performance.tuning=1
 
 debug.gr.swapinterval=0
-
-ro.config.vc_call_steps=8
 
 ro.config.hw_quickpoweron=true
 
