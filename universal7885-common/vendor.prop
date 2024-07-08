@@ -103,10 +103,14 @@ ro.hardware.chipname=exynos7884B
 
 # Audio
 ro.config.vc_call_vol_steps=8
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicerec=true
-persist.audio.fluence.speaker=true
 use.voice.path.for.pcm.voip=true
+ro.qc.sdk.audio.ssr=false
+ro.qc.sdk.audio.fluencetype=fluence
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=false
+persist.audio.fluence.mode=endfire
+persist.audio.aanc.enable=false
 
 ## Vibrator HAL
 ro.vendor.vibrator_hal.click_duration=60
@@ -116,3 +120,19 @@ ro.vendor.vibrator_hal.texture_tick_duration=40
 # Fingerprint
 ro.vendor.fingerprint.type?=rear
 ro.vendor.fingerprint.supports_gestures?=true
+
+# Sensors
+persist.vendor.sensors.allow_non_default_discovery=true
+persist.vendor.sensors.enable.mag_filter=true
+persist.vendor.sensors.on_change_sample_period=true
+persist.vendor.sensors.sync_request=true
+
+# DRM
+drm.service.enabled=true
+
+# Media
+debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
+
+persist.vendor.cne.feature=1
