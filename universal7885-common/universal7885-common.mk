@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     libtinycompress \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    libprocessgroup.vendor
 
 # Audio (BT)
 PRODUCT_PACKAGES += \
@@ -103,7 +104,8 @@ endif
 
 PRODUCT_PACKAGES += \
     libGrallocWrapper \
-    libacryl
+    libacryl \
+    libexpat.vendor
 
 # Camera app
 PRODUCT_PACKAGES += \
@@ -112,6 +114,10 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
+
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Debug
 $(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
@@ -317,7 +323,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor
 
 PRODUCT_PACKAGES += \
     secril_config_svc
