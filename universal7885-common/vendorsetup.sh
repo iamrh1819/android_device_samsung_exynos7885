@@ -32,8 +32,8 @@ mv nfc hardware/samsung
 
 echo 'Cloning Samsung Extras [5/8]'
 # Samsung Extra Interfaces
-rm -rf hardware/lineage/interfaces
-git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
+#rm -rf hardware/lineage/interfaces
+#git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-20 hardware/samsung-ext/interfaces
 
 
@@ -66,9 +66,9 @@ git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openma
 
 echo 'Cloning Sepolicy Dependency repo [8/8]'
 # Sepolicy
-rm -rf device/aosp/sepolicy
+#rm -rf device/aosp/sepolicy
 
-git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
+#git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
 
 echo 'Completed, Now proceeding to lunch'
 
