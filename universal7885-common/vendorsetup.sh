@@ -64,7 +64,7 @@ git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openma
 
 
 
-echo 'Cloning Sepolicy Dependency repo [8/8]'
+#echo 'Cloning Sepolicy Dependency repo [8/8]'
 # Sepolicy
 #rm -rf device/aosp/sepolicy
 
