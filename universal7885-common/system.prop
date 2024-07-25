@@ -183,3 +183,18 @@ mm.enable.smoothstreaming=true
 persist.vendor.overlay.izat.optin=rro
 
 debug.force_no_blanking=true
+
+ro.hwui.disable_scissor_opt=false
+
+# RIL Fix
+ro.ril.transmitpower=true
+ro.ril.hep=1
+
+# Zygote
+ro.zygote.disable_gl_preload=true
+
+ro.config.nocheckin=1
+
+debug.sf.no_hw_vsync=1
+
+ro.kernel.android.checkjni=0
