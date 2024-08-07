@@ -13,8 +13,8 @@
 // limitations under the License.
 
 prebuilt_etc {
-    name: "fstab.enableswap",
-    src: "etc/fstab.enableswap",
+    name: "fstab.zram",
+    src: "etc/fstab.zram",
     vendor: true,
 }
 
