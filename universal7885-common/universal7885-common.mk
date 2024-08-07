@@ -164,7 +164,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.$(TARGET_SOC) \
-    fstab.enableswap \
+    fstab.zram \
     init.exynos7885.rc \
     init.exynos7885.usb.rc \
     wifi_sec.rc \
