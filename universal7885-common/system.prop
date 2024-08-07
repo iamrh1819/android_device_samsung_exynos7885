@@ -210,3 +210,5 @@ profiler.force_disable_ulog=1
 dalvik.vm.dexopt-flags=v=a,o=a,m=y,u=y
 
 ro.HOME_APP_ADJ=1
+
+ro.config.avoid_gfx_accel=true
