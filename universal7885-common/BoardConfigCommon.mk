@@ -43,6 +43,9 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 # Camera - libhwjpeg, unset it to enable guard
 TARGET_USES_UNIVERSAL_LIBHWJPEG :=
 
+# Camera
+MALLOC_SVELTE := true
+
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 
