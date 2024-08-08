@@ -23,7 +23,7 @@ debug.sf.hw=0
 ro.telephony.default_network=9,9
 
 # Fling
-ro.min.fling_velocity=10000
+ro.min.fling_velocity=160
 ro.max.fling_velocity=20000 
 ro.vendor.qti.cgroup_follow.enable=true 
 persist.vendor.qti.inputopts.enable=true 
