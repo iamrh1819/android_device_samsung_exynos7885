@@ -11,7 +11,8 @@ DEVICE_MATRIX_FILE := $(MANIFEST_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(MANIFEST_PATH)/device_framework_matrix.xml \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    #vendor/lineage/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
     
 
 ODM_MANIFEST_SKUS += NFC
