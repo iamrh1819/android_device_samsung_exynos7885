@@ -97,6 +97,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider.samsung \
     libhypervintf \
     libsensorndkbridge
+PRODUCT_PACKAGES += \
+    libhwjpeg \
+    libexpat.vendor
 
 PRODUCT_PACKAGES += \
     libGrallocWrapper \
