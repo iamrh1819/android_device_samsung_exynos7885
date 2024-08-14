@@ -386,6 +386,18 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 
+# Preopt SystemUI and Settings
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    SystemUIGoogle \
+    Settings \
+    SettingsGoogle \
+    NexusLauncherRelease
+
+# Compile SystemUI on device with `speed`.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 # Task profiles
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tasks/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
@@ -404,7 +416,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     WifiOverlay \
-    wpa_supplicant
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
