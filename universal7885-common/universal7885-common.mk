@@ -126,6 +126,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor
 
+# FastCharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung
+
 # Fingerprint
 TARGET_BOARD_HAS_FP ?= true
 ifeq ($(TARGET_BOARD_HAS_FP), true)
