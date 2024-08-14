@@ -331,6 +331,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     libnetutils.vendor \
+    secril_config_svc \
     libsqlite.vendor
 
 PRODUCT_PACKAGES += \
