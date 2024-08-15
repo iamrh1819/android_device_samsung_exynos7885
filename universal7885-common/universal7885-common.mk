@@ -95,7 +95,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
-    #libhypervintf \
+    #libhypervintf
     libsensorndkbridge
 PRODUCT_PACKAGES += \
     libhwjpeg \
