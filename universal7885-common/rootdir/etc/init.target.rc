@@ -23,3 +23,4 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.zram
     write /proc/sys/vm/swappiness 100
 
+    stop statsd
