@@ -363,6 +363,8 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
     android.hardware.contexthub@1.0.vendor:64 \
     android.hardware.sensors-service.samsung-multihal \
+    android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
 
 # Shims
