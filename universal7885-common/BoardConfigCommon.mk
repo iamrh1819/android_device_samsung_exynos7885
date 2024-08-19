@@ -66,8 +66,6 @@ ifneq ($(TARGET_HAS_UDFPS),true)
 TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
 endif
 
-## Graphics
-TARGET_USES_VULKAN := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_universal7885
