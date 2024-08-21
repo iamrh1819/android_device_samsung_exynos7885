@@ -96,9 +96,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
     libsensorndkbridge
-PRODUCT_PACKAGES += \
-    libhwjpeg \
-    libexpat.vendor
 
 PRODUCT_PACKAGES += \
     libGrallocWrapper \
@@ -357,7 +354,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
-    android.hardware.sensors-service.samsung-multihal \
+    
     libsensorndkbridge
 
 # Shims
