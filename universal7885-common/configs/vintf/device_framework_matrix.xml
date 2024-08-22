@@ -10,5 +10,4 @@
         </interface>
     </hal>
     
-   <kernel version="4.4.302" />
 </compatibility-matrix>
