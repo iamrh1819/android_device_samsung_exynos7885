@@ -354,6 +354,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
+    android.hardware.sensors-service.samsung-multihal \
     libsensorndkbridge
 
 # Shims
