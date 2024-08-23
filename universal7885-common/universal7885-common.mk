@@ -94,8 +94,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    libsensorndkbridge
+    android.hardware.camera.provider-service.samsung
 
 PRODUCT_PACKAGES += \
     libGrallocWrapper \
