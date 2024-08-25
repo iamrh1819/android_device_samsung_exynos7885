@@ -1,28 +1,28 @@
 #!/bin/bash
 
 echo 'Starting Cloning repos for exynos7885'
-echo 'Cloning Kernel tree [1/7]'
+echo 'Cloning Kernel tree [1/8]'
 # Kernel for exynos7885
 rm -rf kernel/samsung/exynos7885
 
 git clone https://github.com/eurekadevelopment/Eureka-Kernel-Exynos7885-Q-R-S -b R15_rom kernel/samsung/exynos7885
 
 
-echo 'Cloning Device Tree [2/7]'
+echo 'Cloning Device Tree [2/8]'
 # Device tree for exynos7885
 rm -rf device/samsung
 
 git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A14-NF device/samsung
 
 
-echo 'Cloning Vendor Trees [3/7]'
+echo 'Cloning Vendor Trees [3/8]'
 # Vendor blobs for exynos7885
 rm -rf vendor/samsung
 
 git clone https://github.com/eurekadevelopment/android_vendor_samsung_exynos7885 -b android-14 vendor/samsung
 
 
-echo 'Cloning Hardware Samsung [4/7]'
+echo 'Cloning Hardware Samsung [4/8]'
 # Hardware OSS parts for Samsung
 mv hardware/samsung/nfc .
 rm -rf hardware/samsung
@@ -30,14 +30,14 @@ git clone https://github.com/Roynas-Android-Playground/android_hardware_samsung 
 mv nfc hardware/samsung
 
 
-echo 'Cloning Hardware Samsung [5/7]'
+echo 'Cloning Hardware Samsung [5/8]'
 # Samsung Extra Interfaces
 #rm -rf hardware/lineage/interfaces
 #git clone https://github.com/LineageOS/android_hardware_lineage_interfaces -b lineage-21.0 hardware/lineage/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-21 hardware/samsung-ext/interfaces
 
 
-echo 'Cloning Lineage-CP [6/7]'
+echo 'Cloning Lineage-CP [6/8]'
 # Lineage-CP
 rm -rf hardware/samsung_slsi/libbt
 rm -rf hardware/samsung_slsi/scsc_wifibt/wifi_hal
@@ -48,7 +48,7 @@ git clone https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib -b lineage-21 hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
 
 
-echo 'Cloning Samsung_Slsi and Linaro BSP repos [7/7]'
+echo 'Cloning Samsung_Slsi and Linaro BSP repos [7/8]'
 # SLSI Sepolicy
 rm -rf device/samsung_slsi/sepolicy
 git clone https://github.com/Roynas-Android-Playground/android_device_samsung_slsi_sepolicy -b lineage-21 device/samsung_slsi/sepolicy
@@ -62,6 +62,9 @@ git clone https://github.com/linux4-bringup-priv/android_hardware_samsung_slsi-l
 git clone https://github.com/linux4-bringup-priv/android_hardware_samsung_slsi-linaro_openmax.git hardware/samsung_slsi-linaro/openmax
 git clone https://github.com/linux4-bringup-priv/android_hardware_samsung_slsi-linaro_interfaces.git hardware/samsung_slsi-linaro/interfaces
 
+echo 'Cloning and Including Viper4Android [8/8]'
+rm -rf packages/apps/ViPER4AndroidFX
+git clone https://github.com/iamrh1819/android_packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 echo 'Completed, Now proceeding to lunch'
 
