@@ -64,7 +64,7 @@ git clone https://github.com/linux4-bringup-priv/android_hardware_samsung_slsi-l
 
 echo 'Cloning and Including Viper4Android [8/8]'
 rm -rf packages/apps/ViPER4AndroidFX
-git clone https://github.com/iamrh1819/android_packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+git clone https://github.com/iamrh1819/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 echo 'Completed, Now proceeding to lunch'
 
