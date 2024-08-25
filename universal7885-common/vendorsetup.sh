@@ -66,7 +66,7 @@ git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openma
 
 echo 'Cloning and Including Viper4Android [8/9]'
 rm -rf packages/apps/ViPER4AndroidFX
-git clone https://github.com/iamrh1819/android_packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+git clone https://github.com/iamrh1819/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 #echo 'Cloning Sepolicy Dependency repo [9/9]'
 # Sepolicy
