@@ -9,7 +9,7 @@ $(call inherit-product, device/samsung/universal7885-common/universal7885-common
 $(call inherit-product, vendor/samsung/a30/a30-vendor.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
