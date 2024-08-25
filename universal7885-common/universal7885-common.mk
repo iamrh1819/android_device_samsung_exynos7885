@@ -369,6 +369,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Workaround for vintf issues...
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vintf/compatibility_matrix.3.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/vintf/compatibility_matrix.3.xml
