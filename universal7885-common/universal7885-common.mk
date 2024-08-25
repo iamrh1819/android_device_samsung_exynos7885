@@ -396,6 +396,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
