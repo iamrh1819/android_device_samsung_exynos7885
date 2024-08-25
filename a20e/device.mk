@@ -9,7 +9,7 @@ $(call inherit-product, device/samsung/universal7885-common/universal7885-common
 $(call inherit-product, vendor/samsung/a20e/a20e-vendor.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung
