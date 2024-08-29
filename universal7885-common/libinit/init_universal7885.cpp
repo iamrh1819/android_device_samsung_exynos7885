@@ -102,5 +102,5 @@ void vendor_load_properties() {
   // Set model based on bootloader supplied model
   set_ro_build_prop("model", model);
   set_ro_build_prop("product", model, false);
-  property_override("ro.rising.maintainer", "Ʀᴀ㉿ɪƁ");
+  
 }
