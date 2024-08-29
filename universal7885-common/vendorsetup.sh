@@ -12,7 +12,7 @@ echo 'Cloning Device Tree [2/8]'
 # Device tree for exynos7885
 rm -rf device/samsung
 
-git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A14-NF device/samsung
+git clone https://github.com/iamrh1819/android_device_samsung_exynos7885 -b A14-TenX device/samsung
 
 
 echo 'Cloning Vendor Trees [3/8]'
