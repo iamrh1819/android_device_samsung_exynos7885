@@ -11,6 +11,8 @@
    <bool name="config_enableAutoPowerModes">true</bool>
    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+   <!-- Whether device supports increased touch sensitvity -->
+    <bool name="config_supportGloveMode">true</bool>
    <integer name="config_screenBrightnessDoze">20</integer>
    <!-- The device supports freeform window management. Windows have title bars and can be moved
          and resized. If you set this to true, you also need to add
