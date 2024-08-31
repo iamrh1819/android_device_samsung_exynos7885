@@ -27,6 +27,8 @@
 
 #include <vector>
 
+#include <sys/sysinfo.h>
+#include <sys/stat.h>
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -76,31 +78,26 @@ static inline bool hasEnding(const std::string& str, char suffix)
 void vendor_load_properties() {
   std::string model;
   bool isNFC = false;
+  struct stat statbuf{};
+  char errbuf[40] = {};
 
   model = GetProperty("ro.boot.product.model", "");
   if (model.empty()) {
     model = GetProperty("ro.boot.em.model", "");
   }
 
-  // Korean models all have NFC
-  isNFC |= hasEnding(model, 'N');
-  isNFC |= hasEnding(model, 'S');
-  isNFC |= hasEnding(model, 'K');
-
-  // Exceptions
-  isNFC |= model == "SM-A202F";
-  isNFC |= model == "SM-A405FM";
-  isNFC |= model == "SM-A405F";
-
-  // Set the NFC property, if NFC is present via modelname.
+  // We check the sec-nfc node and if it is a character device
+  isNFC = stat("/dev/sec-nfc", &statbuf) == 0 && S_ISCHR(statbuf.mode);
+  // Set the NFC property, if NFC is present.
   if (isNFC) {
     property_override("ro.boot.product.hardware.sku", "NFC");
+  } else {
+    snprintf(errbuf, sizeof(errbuf), "stat failed: error -%d", errno);
+    property_override("ro.boot.product.hardware.sku_failed_reason", errbuf);
   }
 
-  
 
   // Set model based on bootloader supplied model
   set_ro_build_prop("model", model);
   set_ro_build_prop("product", model, false);
-  
 }
