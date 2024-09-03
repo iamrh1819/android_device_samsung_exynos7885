@@ -61,5 +61,5 @@
 
 #Hals
 /(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider-service\.samsung           u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.samsung                           u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64                 u:object_r:hal_camera_default_exec:s0
