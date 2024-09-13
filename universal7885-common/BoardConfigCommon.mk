@@ -47,14 +47,6 @@ TARGET_USES_UNIVERSAL_LIBHWJPEG :=
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
-# Camera
-ifneq ($(TARGET_DEVICE),a10)
-SOONG_CONFIG_NAMESPACES += samsungCameraVars
-SOONG_CONFIG_samsungCameraVars += extra_ids
-SOONG_CONFIG_samsungCameraVars_extra_ids := 50
-endif
-$(call soong_config_set,samsungCameraVars,usage_64bit,true)
-
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 
