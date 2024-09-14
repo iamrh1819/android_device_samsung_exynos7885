@@ -145,5 +145,3 @@ CONFIG_IEEE80211AC := true
 # Vibrator
 $(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
-# SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
