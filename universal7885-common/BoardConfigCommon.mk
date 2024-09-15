@@ -44,6 +44,16 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 TARGET_USES_UNIVERSAL_LIBHWJPEG :=
 
 # Camera
+ifneq ($(TARGET_DEVICE),a10)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+endif
+SOONG_CONFIG_samsungCameraVars += camera_32bit
+SOONG_CONFIG_samsungCameraVars_camera_32bit := true
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
+
+# Camera
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
