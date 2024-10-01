@@ -69,11 +69,11 @@ echo 'Cloning and Including Viper4Android [8/9]'
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/iamrh1819/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
-#echo 'Cloning Sepolicy Dependency repo [9/9]'
+echo 'Cloning Sepolicy Dependency repo [9/9]'
 # Sepolicy
-#rm -rf device/aosp/sepolicy
+rm -rf device/aosp/sepolicy
 
-#git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
+git clone https://github.com/crdroidandroid/android_device_crdroid_sepolicy device/aosp/sepolicy
 
 
 echo 'Completed, Now proceeding to lunch'
