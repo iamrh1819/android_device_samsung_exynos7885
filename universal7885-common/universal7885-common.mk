@@ -327,7 +327,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.samsung \
-    vendor.lineage.touch@1.0-service.ss
+    vendor.lineage.touch@1.0-service.ss \
+    vendor.lineage.fastcharge@1.0-service.samsung
     
 
 # Sensors
