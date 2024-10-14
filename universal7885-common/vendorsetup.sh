@@ -33,8 +33,8 @@ mv nfc hardware/samsung
 
 echo 'Cloning Samsung Extras [5/9]'
 # Samsung Extra Interfaces
-rm -rf hardware/arrow/interfaces
-git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
+#rm -rf hardware/arrow/interfaces
+#git clone https://github.com/iamrh1819/android_hardware_lineage_interfaces -b lineage-20.0 hardware/lineage/interfaces
 #git clone https://github.com/iamrh1819/hardware_samsung-extra_interfaces -b lineage-20 hardware/samsung-ext/interfaces
 git clone https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces -b lineage-20 hardware/samsung-ext/interfaces
 
@@ -58,11 +58,11 @@ git clone https://github.com/Roynas-Android-Playground/android_device_samsung_sl
 # Linaro BSP
 rm -rf hardware/samsung_slsi-linaro
 
-git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git -b lineage-19.1 hardware/samsung_slsi-linaro/graphics
-git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git -b lineage-19.1 hardware/samsung_slsi-linaro/config
-git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos
-git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos5.git -b lineage-19.1 hardware/samsung_slsi-linaro/exynos5
-git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openmax.git -b lineage-19.1 hardware/samsung_slsi-linaro/openmax
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_graphics.git  hardware/samsung_slsi-linaro/graphics
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_config.git  hardware/samsung_slsi-linaro/config
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos.git  hardware/samsung_slsi-linaro/exynos
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_exynos5.git  hardware/samsung_slsi-linaro/exynos5
+git clone https://github.com/K9100ii/android_hardware_samsung_slsi-linaro_openmax.git  hardware/samsung_slsi-linaro/openmax
 
 
 echo 'Cloning and Including Viper4Android [8/9]'
