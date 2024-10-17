@@ -14,8 +14,8 @@ allow hal_sensors_default sysfs_input:dir r_dir_perms;
 allow hal_sensors_default sysfs_input:file rw_file_perms;
 
 # Allow sensor HAL to read/write vendor_sysfs_sensors_writable
-allow hal_sensors_default sysfs_sensors_writable:dir r_dir_perms;
-allow hal_sensors_default sysfs_sensors_writable:file rw_file_perms;
+allow hal_sensors_default vendor_sysfs_sensors_writable:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_sensors_writable:file rw_file_perms;
 
 # Allow sensor HAL to to read/wite sec touchscreen
 r_dir_file(hal_sensors_default, vendor_sysfs_touchscreen)
