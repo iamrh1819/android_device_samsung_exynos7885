@@ -93,14 +93,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.profile.vc.server.enabled=true
 
 # Camera
-TARGET_BOARD_CAMERA_COUNT ?= 3
-ifeq ($(TARGET_BOARD_CAMERA_COUNT), 3)
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service.exynos7885
-else
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
-endif
+    android.hardware.camera.provider-service.samsung \
+    libsensorndkbridge
     
 PRODUCT_PACKAGES += \
     libGrallocWrapper \
@@ -362,11 +357,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.samsung-multihal \
-    sensors.dynamic_sensor_hal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
+    android.hardware.contexthub@1.0.vendor:64 \
+    android.hardware.sensors-service.samsung-multihal
 
 # Shims
 PRODUCT_PACKAGES += \
