@@ -46,6 +46,13 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 # Camera - libhwjpeg, unset it to enable guard
 TARGET_USES_UNIVERSAL_LIBHWJPEG :=
 
+# Camera
+ifneq ($(TARGET_DEVICE),a10)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+endif
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 # Camera
 MALLOC_SVELTE := true
