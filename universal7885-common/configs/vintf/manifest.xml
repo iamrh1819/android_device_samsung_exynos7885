@@ -5,11 +5,7 @@
       <transport>hwbinder</transport>
       <fqname>@7.0::IDevicesFactory/default</fqname>
    </hal>
-   <hal format="hidl">
-      <name>android.hardware.camera.provider</name>
-      <transport>hwbinder</transport>
-      <fqname>@2.5::ICameraProvider/legacy/0</fqname>
-   </hal>
+   
    <hal format="hidl">
       <name>android.hardware.audio.effect</name>
       <transport>hwbinder</transport>
@@ -66,11 +62,7 @@
       <fqname>@1.0::IOmx/default</fqname>
       <fqname>@1.0::IOmxStore/default</fqname>
    </hal>
-   <hal format="hidl">
-      <name>android.hardware.sensors</name>
-      <transport>hwbinder</transport>
-      <fqname>@1.0::ISensors/default</fqname>
-   </hal>
+   
    <hal format="hidl">
       <name>android.hardware.radio</name>
       <transport>hwbinder</transport>
